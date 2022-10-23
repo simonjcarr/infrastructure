@@ -3,3 +3,8 @@
   yum:
     name: docker
     state: latest
+- name: Create deployments folder
+  file:
+    path: /root/deployments
+    state: directory
+    mode: "0755"

@@ -1,0 +1,6 @@
+{
+  "yaml.schemas": {
+    "Kubernetes": "*.yaml",
+    "https://raw.githubusercontent.com/ansible/schemas/main/f/ansible.json#/$defs/tasks": "file:///Users/soxprox/Development/infrastructure/web-service/anisble/playbooks/roles/apps/test_app/gui/tasks/main.yml"
+  }
+}

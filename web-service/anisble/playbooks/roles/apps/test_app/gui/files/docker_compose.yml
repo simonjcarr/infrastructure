@@ -1,0 +1,6 @@
+version: "3"
+services:
+  gui:
+    image: simoncarr/simple_web_app_gui:main
+    ports:
+      - 8080:8080
