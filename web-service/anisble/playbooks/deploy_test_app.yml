@@ -2,4 +2,4 @@
   - hosts: docker
     become: true
     roles:
-      - role: test_app
+      - role: apps/test_app/gui
