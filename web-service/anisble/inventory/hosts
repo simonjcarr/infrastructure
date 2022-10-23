@@ -1,0 +1,2 @@
+nginx ansible_host=95.217.157.96
+docker ansible_host=65.21.61.107

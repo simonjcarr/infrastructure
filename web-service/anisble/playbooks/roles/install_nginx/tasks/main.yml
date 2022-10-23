@@ -1,0 +1,7 @@
+- name: install nginx
+  become: true
+  yum:
+    name: {{ packages }}
+  vars:
+    packages:
+      - nginx
