@@ -1,0 +1,10 @@
+{
+  "hcloud_sandpit_token": "",
+  "public_key_file": "",
+  "hcloud_network": "10.0.0.0/16",
+  "hcloud_subnet": "10.0.2.0/24",
+  "hcloud_network_format": "10.0.2.",
+  "network_zone": "eu-central",
+  "image": "centos-stream-8",
+  "image_type": "cpx11"
+}
