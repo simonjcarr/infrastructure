@@ -1,5 +1,4 @@
 ---
   - hosts: docker
-    become: true
     roles:
       - role: apps/test_app/gui

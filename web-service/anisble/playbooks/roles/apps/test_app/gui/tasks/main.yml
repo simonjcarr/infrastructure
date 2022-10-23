@@ -1,7 +1,7 @@
----
-  - hosts: docker
-    copy:
-      src: docker_compose.yml
-      dest: /root/deployments/docker_compose.yml
-      owner: root
-      group: root
+- name: Copy the docker copose file
+  become: true
+  copy:
+    src: docker_compose.yml
+    dest: /root/deployments/docker_compose.yml
+    owner: root
+    group: root
