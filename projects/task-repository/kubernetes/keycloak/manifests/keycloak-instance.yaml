@@ -1,0 +1,37 @@
+apiVersion: k8s.keycloak.org/v2alpha1
+kind: Keycloak
+metadata:
+  name: example-kc
+spec:
+  instances: 2
+  ingress:
+    enabled: true
+  db:
+    vendor: postgres
+    host: keycloak-postgres-cluster
+    usernameSecret:
+      name: postgres.keycloak-postgres-cluster.credentials.postgresql.acid.zalan.do
+      key: username
+    passwordSecret:
+      name: postgres.keycloak-postgres-cluster.credentials.postgresql.acid.zalan.do
+      key: password
+  http:
+    tlsSecret: keycloak-tls-secret
+  hostname:
+    hostname: keycloak.soxprox.com
+  unsupported:
+    podTemplate:
+      spec:
+        containers:
+          - name: keycloak
+            env:
+              - name: PROXY_ADDRESS_FORWARDING
+                value: "true"
+              - name: KC_HOSTNAME
+                value: "keycloak.soxprox.com"
+              - name: KC_PROXY
+                value: "passthrough"
+              - name: KEYCLOAK_ADMIN
+                value: "admin"
+              - name: KEYCLOAK_ADMIN_PASSWORD
+                value: "password"
