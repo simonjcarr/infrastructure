@@ -1,7 +1,7 @@
 apiVersion: k8s.keycloak.org/v2alpha1
 kind: Keycloak
 metadata:
-  name: example-kc
+  name: task-repo-keycloak
 spec:
   instances: 2
   ingress:
@@ -28,7 +28,7 @@ spec:
               - name: PROXY_ADDRESS_FORWARDING
                 value: "true"
               - name: KC_HOSTNAME
-                value: "keycloak.soxprox.com"
+                value: "authtr.soxprox.com"
               - name: KC_PROXY
                 value: "passthrough"
               - name: KEYCLOAK_ADMIN
