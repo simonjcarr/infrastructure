@@ -17,6 +17,8 @@ spec:
       key: password
   http:
     tlsSecret: keycloak-tls-secret
+    httpPort: 8080
+    httpEnabled: true
   hostname:
     hostname: keycloak.soxprox.com
   unsupported:
