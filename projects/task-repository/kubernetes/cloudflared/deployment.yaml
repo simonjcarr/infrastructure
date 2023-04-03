@@ -88,10 +88,15 @@ data:
     # from the internet to cloudflared, run `cloudflared tunnel route dns <tunnel> <hostname>`.
     # E.g. `cloudflared tunnel route dns example-tunnel tunnel.example.com`.
     ingress:
-    - hostname: "argocd.task-repository.soxprox.com"
+    - hostname: argocd.task-repository.soxprox.com
       service: https://argocd-server.argocd.svc.cluster.local:443
       originRequest:
         noTLSVerify: true
-
+    - hostname: authtr.soxprox.com
+      service: http://rancher.cattle-system.svc.cluster.local
+    - hostname: argocdtr.soxprox.com
+      service: https://argocd-server.argocd.svc.cluster.local
+      originRequest:
+        noTLSVerify: true
     # This rule matches any traffic which didn't match a previous rule, and responds with HTTP 404.
     - service: http_status:404
