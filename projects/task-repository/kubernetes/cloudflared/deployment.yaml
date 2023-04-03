@@ -92,10 +92,14 @@ data:
       service: https://argocd-server.argocd.svc.cluster.local:443
       originRequest:
         noTLSVerify: true
-    - hostname: authtr.soxprox.com
+    - hostname: ranchertr.soxprox.com
       service: http://rancher.cattle-system.svc.cluster.local
     - hostname: argocdtr.soxprox.com
       service: https://argocd-server.argocd.svc.cluster.local
+      originRequest:
+        noTLSVerify: true
+    - hostname: authtr.soxprox.com
+      service: https://task-repo-keycloak.keycloak.svc.cluster.local
       originRequest:
         noTLSVerify: true
     # This rule matches any traffic which didn't match a previous rule, and responds with HTTP 404.
