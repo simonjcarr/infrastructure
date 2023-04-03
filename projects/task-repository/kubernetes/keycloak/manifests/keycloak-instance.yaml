@@ -17,7 +17,7 @@ spec:
       key: password
   http:
     tlsSecret: keycloak-tls-secret
-    httpsPort: 6743
+    httpsPort: 8443
     httpPort: 8080
     httpEnabled: true
   hostname:
